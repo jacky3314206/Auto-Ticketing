@@ -1,20 +1,19 @@
 import time
-import cv2
-import pytesseract
 import os
 import base64
+
+import cv2
 from PIL import Image
-from selenium.webdriver.support.ui import Select
-from helium import click
+import pytesseract
 from selenium import webdriver
-from undetected_chromedriver import Chrome
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-import undetected_chromedriver as uc
+from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.action_chains import ActionChains
+import undetected_chromedriver as uc
+from helium import click
 
 
 options = uc.ChromeOptions()
