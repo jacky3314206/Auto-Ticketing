@@ -1,19 +1,20 @@
 import time
+import cv2
+import pytesseract
 import os
 import base64
-
-import cv2
 from PIL import Image
-import pytesseract
+from selenium.webdriver.support.ui import Select
+from helium import click
 from selenium import webdriver
+from undetected_chromedriver import Chrome
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait, Select
-from selenium.webdriver.chrome.options import Options
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.common.action_chains import ActionChains
 import undetected_chromedriver as uc
-from helium import click
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.common.exceptions import TimeoutException
 
 
 options = uc.ChromeOptions()
@@ -38,8 +39,8 @@ def scroll(num):
 
 def goole_login():
 
-    address = "your_email_address"
-    password1 = "your_password"
+    address = "jacky331429@gmail.com"
+    password1 = "za86663314"
 
     signin = driver.find_element(By.XPATH, "//*[@id='bs-navbar']/div/div[2]/ul[3]/li/a")
     signin.click()
@@ -66,18 +67,18 @@ def homepage_elements():
     news_page = driver.find_element(By.ID,"latest-selling-tab").click()
     driver.implicitly_wait(10)
     element_1 = driver.find_element(By.XPATH,"//*[@id='latest-selling']")
-    elements = element_1.find_element(By.XPATH,"//*[@id='latest-selling']/div/div[5]").click()   #最後的div[5]記得要改成第一個節目
+    elements = element_1.find_element(By.XPATH,"//*[@id='latest-selling']/div/div[1]").click()   #最後的div[5]記得要改成第一個節目div[1]
 
     return elements
 def buy_page():
     buy = driver.find_element(By.CLASS_NAME,"buy")
     buy.click()
     driver.implicitly_wait(10)
-    immediately = driver.find_element(By.XPATH,"//*[@id='gameList']/table/tbody/tr/td[4]/button") #依照需求更改成指定節目 ex://*[@id='gameList']/table/tbody/tr[2]/td[4]/button
+    immediately = driver.find_element(By.XPATH,"//*[@id='gameList']/table/tbody/tr[2]/td[4]/button") #記得改成//*[@id='gameList']/table/tbody/tr[2]/td[4]/button
     immediately.click()
 
 def choise_seat():
-    seat = driver.find_element(By.XPATH, "//*[@id='group_0']/li[1]")#依照需求更改成指定節目 ex://*[@id='group_6']/li[4]
+    seat = driver.find_element(By.XPATH, "//*[@id='group_6']/li[4]")#記得改成221區 //*[@id='group_6']/li[4]
     seat.click()
 
 def buy_num():
@@ -153,24 +154,24 @@ def accept_submit():
     accept = driver.find_element(By.CSS_SELECTOR,"input.form-check-input")
     accept.click()
 
-    #送出按鈕
-    submit = driver.find_element(By.CSS_SELECTOR,"button.btn.btn-primary.btn-green")
-    submit.click()
+    # #送出按鈕
+    # submit = driver.find_element(By.CSS_SELECTOR,"button.btn.btn-primary.btn-green")
+    # submit.click()
 
 
 
 if __name__ == "__main__" :
-    # goole_login()
+    goole_login()
     cookies()
-    # input("Press Enter to next step")
     homepage_elements()
     buy_page()
     # input("Press Enter to next step")
     choise_seat()
     buy_num()
-    send_image()
-    # input("Press Enter to close")
     accept_submit()
+    # send_image()
+    # input("Press Enter to close")
+
 
     #按下Enter可以關閉視窗
     input("Press Enter to close")
