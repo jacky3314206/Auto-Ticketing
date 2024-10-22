@@ -39,8 +39,8 @@ def scroll(num):
 
 def goole_login():
 
-    address = "jacky331429@gmail.com"
-    password1 = "za86663314"
+    address = "enter your email"
+    password1 = "enter tour password"
 
     signin = driver.find_element(By.XPATH, "//*[@id='bs-navbar']/div/div[2]/ul[3]/li/a")
     signin.click()
