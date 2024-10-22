@@ -74,11 +74,11 @@ def buy_page():
     buy = driver.find_element(By.CLASS_NAME,"buy")
     buy.click()
     driver.implicitly_wait(10)
-    immediately = driver.find_element(By.XPATH,"//*[@id='gameList']/table/tbody/tr/td[4]/button") #記得改成//*[@id='gameList']/table/tbody/tr[2]/td[4]/button
+    immediately = driver.find_element(By.XPATH,"//*[@id='gameList']/table/tbody/tr/td[4]/button") #依照需求更改成指定節目 ex://*[@id='gameList']/table/tbody/tr[2]/td[4]/button
     immediately.click()
 
 def choise_seat():
-    seat = driver.find_element(By.XPATH, "//*[@id='group_0']/li[1]")#記得改成//*[@id='group_6']/li[4]
+    seat = driver.find_element(By.XPATH, "//*[@id='group_0']/li[1]")#依照需求更改成指定節目 ex://*[@id='group_6']/li[4]
     seat.click()
 
 def buy_num():
