@@ -78,7 +78,7 @@ def buy_page():
     immediately.click()
 
 def choise_seat():
-    seat = driver.find_element(By.XPATH, "//*[@id='group_0']/li[1]")#記得改成周杰倫//*[@id='group_6']/li[4]
+    seat = driver.find_element(By.XPATH, "//*[@id='group_0']/li[1]")#記得改成//*[@id='group_6']/li[4]
     seat.click()
 
 def buy_num():
