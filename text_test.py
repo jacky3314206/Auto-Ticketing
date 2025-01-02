@@ -19,7 +19,6 @@ options.add_argument("--start-maximized")  # 放大視窗
 
 driver = uc.Chrome(options=options)
 
-# 打开 TixCraft 网站
 driver.get("https://tixcraft.com/ticket/ticket/24_colde/17640/2/47")
 
 def buy_page():
