@@ -1,0 +1,29 @@
+# 🎟️ Tixcraft Ticket Auto-Buying Bot | Selenium + Python  
+
+## 📌 Project Overview  
+This is a **Python + Selenium** automation script designed to help users purchase tickets by simulating human interactions, reducing manual clicks, and improving efficiency.  
+
+> ⚠️ **Disclaimer**: This project is for learning **Selenium automation testing** only. Please comply with Tixcraft's terms of service and do not use it for unauthorized activities.  
+
+---
+
+## 🛠️ **Technologies Used**  
+- **Programming Language**: Python 3.11  
+- **Automation Framework**: Selenium WebDriver  
+- **Supported Browser**: Google Chrome  
+- **Testing Tools**: ChromeDriver, XPath / CSS Selector  
+- **Logging**: Python `logging` module to track ticket purchase flow  
+
+---
+
+## 🚀 **Features**  
+✅ Automatically navigates to the Tixcraft ticket page  
+✅ Detects and clicks the **"Buy Ticket"** button  
+✅ Allows setting **ticket type, quantity, and auto-submitting the order**  
+✅ Uses **Selenium WebDriver** to automate Chrome interactions  
+❌ **(Planned Feature)**: CAPTCHA solving (not implemented yet 😆)  
+
+---
+
+This **English README** ensures your GitHub project looks **professional & interview-ready** for **SDET job applications**! 🚀💪  
+If you need any modifications, feel free to ask! 😆  
