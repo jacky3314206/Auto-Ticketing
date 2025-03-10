@@ -19,7 +19,7 @@ options.add_argument("--start-maximized")  # 放大視窗
 
 driver = uc.Chrome(options=options)
 
-driver.get("https://tixcraft.com/ticket/ticket/24_colde/17640/2/47")
+driver.get("")
 
 def buy_page():
     #選擇票數
