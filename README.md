@@ -12,8 +12,6 @@ This is a Python + Selenium automation script designed to assist in purchasing t
 - **Automation Framework:** Selenium WebDriver
 - **Browser Support:** Google Chrome
 - **Testing Tools:** ChromeDriver, XPath / CSS Selector
-- **Logging:** Python's Logging module to record ticket purchasing process
-
 ---
 
 ## 🚀 Features
@@ -38,7 +36,6 @@ This is a Python + Selenium automation script designed to assist in purchasing t
 - **自動化測試框架：** Selenium WebDriver
 - **瀏覽器支援：** Google Chrome
 - **測試工具：** ChromeDriver、XPath / CSS Selector
-- **日誌記錄：** Logging 模組，記錄購票流程
 
 ---
 
