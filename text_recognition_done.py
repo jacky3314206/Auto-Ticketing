@@ -21,17 +21,17 @@ options = uc.ChromeOptions()
 
 options.add_argument("--start-maximized")  # 放大視窗
 # options.add_experimental_option('detach', True)  # 不自動關閉瀏覽器 undetected_chromedriver無法使用
-# options.add_argument("--headless")  # 使用无头模式
+# options.add_argument("--headless")  
 
-# 启动 Chrome 浏览器
+# 啟動 Chrome 瀏覽器
 
 # driver = uc.Chrome(options=options)
 driver = uc.Chrome(options=options)
 
-# 打开 TixCraft 网站
-driver.get("https://tixcraft.com/")
+# 打開網站
+driver.get("妳的網站")
 
-#下拉視窗
+#下拉網頁
 def scroll(num):
     js="var q=document.documentElement.scrollTop = "+str(num)
     driver.execute_script(js)
@@ -90,7 +90,7 @@ def send_image():
     output_dir = 'captcha'
     os.makedirs(output_dir, exist_ok=True)  # 確保目錄存在
 
-    # 用截圖大法取得驗證碼圖片
+    # 用截圖取得驗證碼圖片
     img_base64 = driver.execute_script("""
             var ele = arguments[0];
             var cnv = document.createElement('canvas');
