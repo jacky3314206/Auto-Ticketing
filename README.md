@@ -15,7 +15,7 @@ This is a Python + Selenium automation script designed to assist in purchasing t
 ---
 
 ## 🚀 Features
-✅ Automatically navigates to Tixcraft event ticket page  
+✅ Automatically navigates to ticket page  
 ✅ Finds and clicks the "Buy Ticket" button  
 ✅ Allows users to predefine ticket type and quantity for auto-submission  
 ✅ Operates Chrome browser using Selenium WebDriver  
