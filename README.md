@@ -22,7 +22,7 @@ This is a Python + Selenium automation script designed to assist in purchasing t
 
 ---
 
-# 🎟️ 自動購票程式 | Selenium + Python
+# 🎟️ 自動購票機器人 | Selenium + Python
 
 ## 📌 專案介紹
 這是一個幫助購買票的 Python + Selenium 自動化腳本，用來模擬人工購票，減少手動點擊的麻煩，提高購票效率。
