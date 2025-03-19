@@ -1,0 +1,22 @@
+name: CI Pipeline  # 工作流程名稱
+
+on: [push, pull_request]  # 監聽 push 和 PR 事件
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # 執行環境
+
+    steps:
+      - name: 檢出程式碼
+        uses: actions/checkout@v3
+
+      - name: 設定 Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: 安裝依賴
+        run: pip install -r requirements.txt
+
+      - name: 執行測試
+        run: pytest text_recognition_done.py
