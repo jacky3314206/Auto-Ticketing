@@ -1,1 +1,8 @@
 pytest
+opencv-python-headless
+pytesseract
+pillow
+selenium
+helium
+undetected-chromedriver
+
