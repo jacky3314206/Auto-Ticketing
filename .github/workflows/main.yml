@@ -18,5 +18,14 @@ jobs:
       - name: 安裝依賴
         run: pip install -r requirements.txt
 
+      - name: 安裝相依套件
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install opencv-python-headless
+      
+      - name: 檢查pip list
+        run: pip list
+        
       - name: 執行測試
         run: pytest text_recognition_done.py
