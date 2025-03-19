@@ -15,6 +15,18 @@ jobs:
         with:
           python-version: '3.9'
 
+      - name: 安裝 Chrome 和 chromedriver
+        run: |
+          sudo apt update
+          sudo apt install -y google-chrome-stable
+          CHROME_VERSION=$(google-chrome --version | awk '{print $3}')
+          wget -q "https://chromedriver.storage.googleapis.com/$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip"
+          unzip chromedriver_linux64.zip
+          sudo mv chromedriver /usr/local/bin/
+          sudo chmod +x /usr/local/bin/chromedriver
+          echo "Chrome version: $CHROME_VERSION"
+          echo "Chromedriver version: $(chromedriver --version)"
+
       - name: 安裝依賴
         run: pip install -r requirements.txt
 
@@ -23,9 +35,12 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
           pip install opencv-python-headless
-      
-      - name: 檢查pip list
+
+      - name: 檢查 pip list
         run: pip list
-        
+
+      - name: 設定環境變數（如果需要）
+        run: echo "PATH=$PATH:/usr/local/bin" >> $GITHUB_ENV
+
       - name: 執行測試
         run: pytest text_recognition_done.py
