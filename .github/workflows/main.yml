@@ -43,4 +43,4 @@ jobs:
         run: echo "PATH=$PATH:/usr/local/bin" >> $GITHUB_ENV
 
       - name: 執行測試
-        run: pytest test/test2.py
+        run: pytest test/test_leetcode.py
