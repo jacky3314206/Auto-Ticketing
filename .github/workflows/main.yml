@@ -43,4 +43,4 @@ jobs:
         run: echo "PATH=$PATH:/usr/local/bin" >> $GITHUB_ENV
 
       - name: 執行測試
-        run: pytest text_recognition_done.py
+        run: pytest test2.py
