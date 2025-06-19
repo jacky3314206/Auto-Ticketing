@@ -44,3 +44,8 @@ This is a Python + Selenium automation script designed to assist in purchasing t
 ✅ 自動尋找「購票按鈕」並點擊  
 ✅ 可設定票種、購票數量，自動提交訂單  
 ✅ 透過 Selenium WebDriver 操作 Chrome 瀏覽器  
+
+---
+
+## 🛠️ 待更新
+- **製作UI介面**
